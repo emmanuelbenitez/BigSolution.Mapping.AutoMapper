@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapping.AutoMapper", "src\M
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{A2671A15-6AFE-4762-B5C3-DB60C44D4D0F}"
 	ProjectSection(SolutionItems) = preProject
+		azure-devops-prerelease.yml = azure-devops-prerelease.yml
+		azure-devops-release.yml = azure-devops-release.yml
+		azure-pipelines-ci.yml = azure-pipelines-ci.yml
 		src\Directory.Build.props = src\Directory.Build.props
+		version-variables.yml = version-variables.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapping.AutoMapper.Tests", "src\Mapping.AutoMapper.Tests\Mapping.AutoMapper.Tests.csproj", "{42CC5E3E-EC08-45C6-961E-CD8FE044885E}"

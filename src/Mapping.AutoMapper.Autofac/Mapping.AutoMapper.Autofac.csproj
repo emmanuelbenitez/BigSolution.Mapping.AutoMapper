@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net471;net472;net48</TargetFrameworks>
-    <AssemblyTitle>BigSolution.Infra.Mapping.AutoMapper</AssemblyTitle>
+    <AssemblyTitle>BigSolution.Infra.Mapping.AutoMapper.Autofac</AssemblyTitle>
     <RootNamespace>BigSolution.Infra.Mapping</RootNamespace>
-    <Description>Implements Mapping for AutoMapper</Description>
+    <Description>Extensions for using BigSolution.Mapping.AutoMapper with Autofac </Description>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,17 +14,19 @@
     <!--<PackageIconUrl>icon url prop</PackageIconUrl>-->
     <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
     <!--<PackageReleaseNotes>release notes prop</PackageReleaseNotes>-->
-    <PackageTags>utility mapping automapper</PackageTags>
+    <PackageTags>utility mapping automapper autofac</PackageTags>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <AssemblyName>BigSolution.Infra.Mapping.AutoMapper</AssemblyName>
+    <AssemblyName>BigSolution.Infra.Mapping.AutoMapper.Autofac</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="AutoMapper" Version="10.0.0" />
-    <PackageReference Include="BigSolution.Infra.Mapping" Version="1.0.1-preview20239.0" />
-    <PackageReference Include="BigSolution.Infra.Validation" Version="2.0.0-preview20239.0" />
+    <PackageReference Include="BigSolution.Infra.Common" Version="1.0.1-preview20239.0" />
+    <PackageReference Include="BigSolution.Infra.Mapping.AutoMapper" Version="1.0.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+    <PackageReference Include="BigSolution.Infra.Validation" Version="2.0.0-preview20239.0" />
   </ItemGroup>
 
 </Project>

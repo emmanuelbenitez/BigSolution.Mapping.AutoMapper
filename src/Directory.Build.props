@@ -24,4 +24,10 @@
   </PropertyGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)../.resources/Directory.Build.props" />
+
+  <PropertyGroup Condition="'$(IsPackable)' != 'false'">
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/emmanuelbenitez/BigSolution.Mapping.AutoMapper</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
 </Project>

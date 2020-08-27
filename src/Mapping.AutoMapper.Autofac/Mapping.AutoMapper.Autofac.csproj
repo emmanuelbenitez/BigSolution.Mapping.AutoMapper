@@ -24,9 +24,12 @@
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="AutoMapper" Version="10.0.0" />
     <PackageReference Include="BigSolution.Infra.Common" Version="1.0.1-preview20239.0" />
-    <PackageReference Include="BigSolution.Infra.Mapping.AutoMapper" Version="1.0.0" />
     <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
     <PackageReference Include="BigSolution.Infra.Validation" Version="2.0.0-preview20239.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mapping.AutoMapper\Mapping.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

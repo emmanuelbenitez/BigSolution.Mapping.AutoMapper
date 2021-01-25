@@ -28,4 +28,5 @@
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE0994C0C751D8C44A7557F291C7D4CFF/@KeyIndexDefined">True</s:Boolean>
 	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileE0994C0C751D8C44A7557F291C7D4CFF/RelativePriority/@EntryValue">3</s:Double>
 	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileFB51496334365A479EB632B726A34A29/@KeyIndexDefined">True</s:Boolean>
-	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileFB51496334365A479EB632B726A34A29/RelativePriority/@EntryValue">1.5</s:Double></wpf:ResourceDictionary>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=FileFB51496334365A479EB632B726A34A29/RelativePriority/@EntryValue">1.5</s:Double>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Benitez/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

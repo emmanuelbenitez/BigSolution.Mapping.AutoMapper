@@ -24,6 +24,7 @@
   </PropertyGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)../.resources/Directory.Build.props" />
+  <Import Project="$(MSBuildThisFileDirectory)../.settings/Directory.Build.props" />
 
   <PropertyGroup Condition="'$(IsPackable)' != 'false'">
     <RepositoryType>git</RepositoryType>

@@ -1,6 +1,6 @@
 #region Copyright & License
 
-// Copyright © 2020 - 2020 Emmanuel Benitez
+// Copyright © 2020 - 2021 Emmanuel Benitez
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,9 @@ namespace BigSolution.Infra.Mapping
     public class AutoMapperMapperFixture
     {
         [Fact]
-        [SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
+        [SuppressMessage("ReSharper", "ObjectCreationAsStatement", Justification = "Testing purpose")]
+        [SuppressMessage("Performance", "CA1806:Do not ignore method results", Justification = "Testing purpose")]
+        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute", Justification = "Testing purpose")]
         public void CreateFailed()
         {
             Action action = () => new AutoMapperMapper<Source, Destination>(null);
@@ -36,7 +38,8 @@ namespace BigSolution.Infra.Mapping
         }
 
         [Fact]
-        [SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
+        [SuppressMessage("ReSharper", "ObjectCreationAsStatement", Justification = "Testing purpose")]
+        [SuppressMessage("Performance", "CA1806:Do not ignore method results", Justification = "Testing purpose")]
         public void CreateSucceeds()
         {
             var fakeMapper = new Mock<IMapper>();

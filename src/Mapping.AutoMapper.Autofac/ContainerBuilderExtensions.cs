@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2020 - 2020 Emmanuel Benitez
+// Copyright © 2020 - 2021 Emmanuel Benitez
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,12 +20,13 @@ using System.Collections.Generic;
 using System.Reflection;
 using Autofac;
 using AutoMapper;
+using JetBrains.Annotations;
 
 namespace BigSolution.Infra.Mapping
 {
     public static class ContainerBuilderExtensions
     {
-        public static void RegisterAutoMapper(this ContainerBuilder builder)
+        public static void RegisterAutoMapper([NotNull] this ContainerBuilder builder)
         {
             Requires.Argument(builder, nameof(builder))
                 .IsNotNull()
@@ -54,7 +55,7 @@ namespace BigSolution.Infra.Mapping
                 .InstancePerLifetimeScope();
         }
 
-        public static void RegisterProfiles(this ContainerBuilder builder, params Assembly[] assemblies)
+        public static void RegisterProfiles([NotNull] this ContainerBuilder builder, params Assembly[] assemblies)
         {
             Requires.Argument(builder, nameof(builder))
                 .IsNotNull()

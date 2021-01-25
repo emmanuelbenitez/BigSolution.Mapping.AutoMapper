@@ -1,6 +1,6 @@
 ﻿#region Copyright & License
 
-// Copyright © 2020 - 2020 Emmanuel Benitez
+// Copyright © 2020 - 2021 Emmanuel Benitez
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ using Autofac;
 using Autofac.Builder;
 using Autofac.Features.Scanning;
 using AutoMapper;
+using JetBrains.Annotations;
 
 namespace BigSolution.Infra.Mapping
 {
@@ -28,7 +29,7 @@ namespace BigSolution.Infra.Mapping
     {
         public static IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle>
             IsProfile<TLimit, TScanningActivatorData, TRegistrationStyle>(
-                this IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle> registration)
+                [NotNull] this IRegistrationBuilder<TLimit, TScanningActivatorData, TRegistrationStyle> registration)
             where TScanningActivatorData : ScanningActivatorData
         {
             Requires.Argument(registration, nameof(registration))

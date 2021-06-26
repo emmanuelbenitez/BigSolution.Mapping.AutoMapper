@@ -48,6 +48,19 @@ namespace BigSolution.Infra.Mapping
         }
 
         [Fact]
+        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute", Justification = "Testing purpose")]
+        public void MapFailedWhenDestinationIsNull()
+        {
+            var autoMapper = new Mapper(new MapperConfiguration(config => config.CreateMap<Source, Destination>()));
+            var mapper = new AutoMapperMapper<Source, Destination>(autoMapper);
+            var source = new Source { Name = "Hello" };
+
+            Action act = () => { mapper.Map(source, null); };
+
+            act.Should().Throw<ArgumentNullException>().Which.ParamName.Should().Be("destination");
+        }
+
+        [Fact]
         public void MapSucceeds()
         {
             var fakeMapper = new Mock<IMapper>();
@@ -59,8 +72,28 @@ namespace BigSolution.Infra.Mapping
             fakeMapper.Verify(m => m.Map<Destination>(It.IsAny<Source>()), Times.Once);
         }
 
-        private class Source { }
+        [Fact]
+        public void MapSucceedsWithDestination()
+        {
+            var autoMapper = new Mapper(new MapperConfiguration(config => config.CreateMap<Source, Destination>()));
+            var mapper = new AutoMapperMapper<Source, Destination>(autoMapper);
+            var destination = new Destination();
+            var source = new Source { Name = "Hello" };
 
-        private class Destination { }
+            Action act = () => { mapper.Map(source, destination); };
+
+            act.Should().NotThrow();
+            destination.Name.Should().Be(source.Name);
+        }
+
+        private class Source
+        {
+            public string Name { get; set; }
+        }
+
+        private class Destination
+        {
+            public string Name { get; set; }
+        }
     }
 }

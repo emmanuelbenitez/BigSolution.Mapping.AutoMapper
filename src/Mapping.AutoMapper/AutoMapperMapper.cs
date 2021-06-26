@@ -39,6 +39,15 @@ namespace BigSolution.Infra.Mapping
             return _mapper.Map<TDestination>(source);
         }
 
+        public void Map(TSource source, TDestination destination)
+        {
+            Requires.Argument(destination, nameof(destination))
+                .IsNotNull()
+                .Check();
+
+            _mapper.Map(source, destination);
+        }
+
         #endregion
 
         private readonly IMapper _mapper;

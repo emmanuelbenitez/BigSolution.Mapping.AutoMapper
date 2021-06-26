@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Autofac" Version="6.2.0" />
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="BigSolution.Infra.Common" Version="1.0.1-preview.210202.0" />
     <PackageReference Include="BigSolution.Infra.Validation" Version="2.0.0-preview.210201.0" />

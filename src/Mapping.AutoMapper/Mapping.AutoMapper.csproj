@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.1;netstandard2.0;net471;net472;net48;net5.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.1;net6.0;</TargetFrameworks>
     <AssemblyTitle>BigSolution.Infra.Mapping.AutoMapper</AssemblyTitle>
     <RootNamespace>BigSolution.Infra.Mapping</RootNamespace>
     <Description>Implements Mapping for AutoMapper</Description>
@@ -21,10 +21,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="BigSolution.Infra.Mapping" Version="1.0.1-preview.210626.0" />
     <PackageReference Include="BigSolution.Infra.Validation" Version="2.0.0-preview.210201.0" />
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.3">
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
